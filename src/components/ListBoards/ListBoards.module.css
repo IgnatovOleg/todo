@@ -1,0 +1,239 @@
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;
+}
+
+.board {
+    align-items: center;
+    margin: 10px;
+    width: 300px;
+    transition: 0.6s ease;
+}
+.board:hover .nameBoard {
+    color: rgb(36, 36, 36);
+    width: 250px;
+    margin-top: 0;
+    /* margin-left: 5px; */
+    transition: 0.6s ease;
+}
+.board:hover .buttonAddTask {
+    color: rgb(36, 36, 36);
+    transition: 0.6s ease;
+}
+.board:hover .deleteBoard {
+    align-items: flex-start;
+    color: rgb(36, 36, 36);
+    transition: 0.6s ease;
+}
+.board:hover .inputNameBoard {
+    margin-top: 5px;
+    transition: 0.6s ease;
+}
+.board:hover .task {
+    display: block;
+    transition: 0.6s ease;
+}
+.board:hover .empty {
+    display: block;
+}
+.board:hover .btnAdd {
+    background-color: rgba(255, 255, 255);
+    color: rgba(36, 36, 36);
+    transition: 0.6s ease;
+}
+
+
+
+
+
+.container {
+    background-color: rgba(126, 126, 126, 0.850);
+    border-radius: 50px;
+    padding-bottom: 10px;
+    height: 100px;
+    transition: 0.6s ease;
+    overflow:hidden;
+    overflow-block: scroll;
+    position: initial;
+    margin-top: 25px;
+}
+.container:hover {
+    background-color: rgb(197, 197, 197, 0.850);
+    border-radius: 8px;
+    height: 250px;
+    transition: 0.6s ease;
+    overflow-y: scroll;
+    /* transform: scale(1.1); */
+}
+.conteiner:hover .deleteBoard {
+    color: rgb(126, 126, 126, 0.850);
+    transition: 0.6s ease;
+}
+.container:active {
+    transform: translate(0em, 0.1em);
+    transition: 0.6s ease;
+}
+.board:hover .inputAdd input {
+    display:inline;
+    opacity: 1;
+    transition: 0.6s ease;
+}
+
+
+.inputNameBoard {
+    margin-top: 43px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(236, 236, 236, 0.342);
+    width: 220px;
+    height: auto;
+    border-radius: 30px;
+    border: 0px;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.6s ease;
+    cursor: pointer;
+    display: block;
+    animation-name: input;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+}
+@keyframes input {
+    0%, 100% {
+        filter: blur(1px);
+        box-shadow:     0 0 10px rgba(255, 255, 255, 0.850),
+                        0 0 30px rgba(255, 255, 255, 0.850),
+                        0 0 90px rgba(255, 255, 255, 0.850),
+                        0 0 30px rgba(255, 255, 255, 0.850),
+                        0 0 10px rgba(255, 255, 255, 0.850);
+    }
+    50% {
+        opacity: 0.1;
+        filter: blur(1px);
+        text-shadow: none;
+    }
+}
+.inputNameBoard:focus {
+    cursor: default;
+    animation-iteration-count:initial;
+    filter: blur(0);
+    transition: 0.2s ease;
+}
+
+
+
+
+
+.nameBoard {
+    color: rgb(236, 236, 236);
+    margin-top: 5px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    transition: 0.6s ease;
+    cursor: default;
+    text-align: left;
+}
+.nameBoard h3 {
+    min-height: 30px;
+    max-height: 100px;
+    width: 220px;
+    display: block;
+    overflow: hidden;
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+}
+
+
+
+.nameBoardAndDelete {
+    display: flex;
+    justify-content: flex-end;
+}
+.inputAdd {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+    
+}
+.inputAdd {
+    height: 30px;
+}
+.inputAdd input {
+    background-color: rgba(255, 255, 255);
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-right: 40px;
+    border-radius: 25px;
+    border: 0px;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.6s ease;
+    cursor: pointer;
+    opacity: 0;
+    display: none;
+}
+.inputAdd input:focus {
+    opacity: 1;
+    cursor:auto;
+    width: 220px;
+    transition: 0.6s ease;
+}
+
+
+
+.buttonAddTask {
+    color: rgb(126, 126, 126);
+    display: flex;
+    cursor: pointer;
+    width: 20%;
+    font-size: 30px;
+    transition: 0.6s ease;
+
+}
+
+
+
+.deleteBoard {
+    color: rgb(126, 126, 126, 0.100);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 15%;
+    font-size: 30px;
+    transition: 0.6s ease;
+    align-items:flex-start;
+}
+
+
+.task {
+    margin-top: 10px;
+    width: 100%;
+    display: none;
+    transition: 0.6s ease;
+}
+
+
+.empty {
+    margin-top: 5px;
+    display: none;
+}
+
+.btnAdd {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(36, 36, 36, 0);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 30px;
+    margin: 3px;
+    margin-right: 15px;
+    transition: 0.6s ease;
+}
+

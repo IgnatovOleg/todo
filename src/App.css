@@ -1,38 +1,67 @@
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
 .App {
-  text-align: center;
+    background: url(https://phonoteka.org/uploads/posts/2022-02/1645314217_1-phonoteka-org-p-chernii-derevyannii-stol-fon-9.jpg);
+    text-align: center;
+    min-height: 100vh;
+    max-height: max-content;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.listBoard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.form {
+    display: flex;
+    padding-top: 50px;
+    margin-left: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.massage {
+    margin-top: 50px;
+    color: rgb(236, 236, 236);
+    font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.addBoard {
+    font-size: 35px;
+    color: rgb(236, 236, 236);
+    background-color: rgba(126, 126, 126, 0.850);
+    animation-name: btn;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    transition: 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes btn {
+    0%, 100% {
+        opacity: 1;
+        filter: blur(0);
+        box-shadow:    0 0 10px rgba(255, 255, 255, 0.850),
+                        0 0 30px rgba(255, 255, 255, 0.850),
+                        0 0 90px rgba(255, 255, 255, 0.850),
+                        0 0 30px rgba(255, 255, 255, 0.850),
+                        0 0 10px rgba(255, 255, 255, 0.850);
+    }
+    50% {
+        opacity: 0.7;
+        filter: blur(0);
+        text-shadow: none;
+    }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addBoard:hover {
+    cursor: pointer;
+    transition: 0.2s ease;
+    transform: scale(1.1);
+}
+.addBoard:active {
+    margin-top: 3px;
+    transition: 0.2s;
 }
